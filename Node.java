@@ -22,5 +22,23 @@ public class Node<T> {
 	}
 	
 	
+	public boolean equals(Object obj) {
+		Node node;
+		if(obj instanceof Node) {
+			node =(Node)obj;
+			return node.t==this.t?true:false;
+		}
+		else 
+			return false;
+	}
+	
+	public int hashCode() {
+		return t.hashCode();
+		
+	}
+	
+	public String toString() {
+		return t.toString();
+	}
 
 }
